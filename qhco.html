@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html>  
+    
+<head>
+    
+<link rel="shortcut icon" href="C:\Users\Qassem\Documents\Desktop\Websites\university\icons\qh.jpg">
+    
+<meta name="author" content="QH-co">    
+    
+<title>University</title>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+/*------------------------------------------------------------------------------------------------------------------------------------------------Scrollbar styles    */
+::-webkit-scrollbar {width:12px;height:12px;}
+    
+::-webkit-scrollbar-track {box-shadow:inset 0 0 10px #3a9625;border-radius:10px;}
+
+::-webkit-scrollbar-thumb {border-radius:10px;background:#3a9625; box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
+
+::-webkit-scrollbar-thumb:hover {background:#2a5321;}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------    */
+::selection {background-color:#c3c328;color:#15241a;}    
+    
+header{background-color:#151539;padding-bottom:10px;padding-top:00px;color:#3a9625;border:3px solid #3a9625;border-top-left-radius:10px;border-top-right-radius:10px;}
+    
+header a{font-size: 80px;}
+    
+nav{background-color:#3a9625;color:#000;border:3px solid #3a9625;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-bottom:60px;}  
+
+nav a:hover{color:#FFF;transition:0.2s;cursor:pointer;}
+    
+nav a:focus{color:red;}    
+
+body{background-color:#151539;padding:3px;margin:3px;}
+
+section{background-color:#3a9625;padding:10px auto;border:3px solid #3a9625;border-top-left-radius:10px;border-top-right-radius:10px;padding-bottom:15px;position:relative;}       
+
+section a:hover{color:#FFF;transition:0.2s;cursor:pointer;}    
+    
+.blank{width:auto;height:250px;border:none;}     
+    
+footer{background-color:#151539;color:#000;border:3px solid #3a9625;border-bottom-left-radius:10px;border-bottom-right-radius:10px;color:#3a9625;}
+    
+footer a{color:#3a9625;text-decoration:none;font-size:20px;}
+    
+footer a:hover{color:#81db6d;transition:0.2s;opacity:1.0;}      
+    
+.seculinks{font-size:20px;color:#000;padding-left:15px;padding-top:15px;float:left;} 
+
+.seculinks:hover{color:#FFF;transition:0.2s;cursor:pointer;}
+
+.naviconimg{padding-top:0px;padding-left:20px;float:left;width:50px;height:auto;}
+
+.naviconimg:hover{transition:0.2s;width:45px;height:auto;cursor:pointer;}  
+    
+footer .cr{color:#3a9625;font-size:20px;}    
+  
+footer img{width:25xp;height:25px;}    
+/*----------------------------------------------------------------------------------------------------------------------------------------------------overlay    */  
+.overlay{height:0%;width:100%;position:fixed;z-index:1;top:0;left:0;background-color:rgb(0,0,0);background-color:#151539;overflow-y:hidden;transition:0.5s;overflow-y:scroll;}
+
+.overlay-content{position:relative;top:5%;width:100%;text-align:center;margin-top:30px;}
+
+.overlay-content li{list-style:none;padding-bottom:20px;}
+    
+.overlay-table{position:relative;top:5%;width:100%;text-align:center;margin-top:30px;padding-bottom:50px;}    
+/*;display:block*/
+.overlay h1{font-size:50px;color:#3a9625;}
+
+.overlay h2{font-size:30px;color:#3a9625;}     
+    
+.overlay li a{padding:8px;text-decoration:none;font-size:36px;color:#3a9625;transition:0.3s;}
+
+.overlay li a:hover{color:#FFF;transition:0.2s;cursor:pointer;}
+    
+.overlay li a:focus{color:red;}    
+    
+.overlay-header{background-color:#151539;color:#3a9625;border:3px solid #3a9625;border-top-left-radius:10px;border-top-right-radius:10px;}     
+ 
+.overlay-nav{background-color:#3a9625;border:3px solid #3a9625;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding-bottom:60px} 
+ 
+.overlay .overlay-nav  .cancelb{float:right;font-size:40px;color:#000;text-decoration:none;padding-right:15px;padding-top:0px;margin-top:0px;}    
+  
+.overlay .overlay-nav  .cancelb:hover{color:#FFF;transition:0.2s;cursor:pointer;}    
+
+.overlay .overlay-content .overlay-nav a:hover{top:0%;color:#FFF;transition:0.2s;cursor:pointer;}    
+    
+.overlay .overlay-content .overlay-nav .cancel{float:right;font-size:40px;color:#000;text-decoration:none;padding-right:15px;padding-top:0px;margin-top:0px;}      
+.overlay .overlay-content .overlay-nav .backbtn{float:left;font-size:40px;color:#000;text-decoration:none;padding-left:15px;padding-top:0px;margin-top:0px;} 
+/*---------------------------------------------------------------------------------------------------------------------------------------------------- boxes   */
+.bx{width:90%;overflow:hidden;margin:60px auto;padding:10px;}
+    
+.bx ul{padding:0px;margin:0px;}
+    
+.bx ul li{list-style:none;float:left;width:20%;height:300px;background:#3a9625;margin:40px 55px 0px 8%;box-sizing:border-box;border-radius:50px;} 
+    
+.bx a{color:#000;cursor:pointer;font-size:0px;} 
+    
+.bx ul li:hover{border:2px solid #3a9625;cursor:pointer;transition:0.2s;background-color:#1a4510;border-radius:55px;color:#fff;font-size:35px;padding-top: 50px;} 
+    
+.bx a:hover{color:#000;text-decoration:none;opacity:2.0;} 
+
+.bx img{width:250px;height:auto;}     
+    
+.bx ul li:hover img{width:0%;height:0%;}     
+/*---------------------------------------------------------------------------------------------------------------------------------------------------- menu    */    
+.sidenav{height:80%;width:0;position:fixed;z-index:1;top:0;right:0;background-color:#14260f;overflow-x:hidden;transition:0.5s;padding-top:60px;}
+
+.sidenav a{padding:8px 8px 8px 32px;text-decoration:none;font-size:25px;color:#3a9625;display:block;transition:0.3s;}
+ 
+.sidenav a:hover{color:#FFF;}
+
+.sidenav .closebtn{position:absolute;top:0;right:25px;font-size:36px;margin-left:50px;}
+    
+nav .menu{float:right;padding-right:15px;padding-top:5px;font-size:30px;}      
+    
+section .mail{float:right;padding-right:15px;padding-top:5px;font-size:30px;text-decoration:none;color:#000;} 
+/*---------------------------------------------------------------------------------------------------------------------------------------------------- table   */    
+table{font-size:36px;color:#FFF;width:75%;text-align:center;direction:ltr;}
+ 
+table th{background-color:#3a9625;color:#000;}
+
+table td{padding-top:5px;padding-bottom:5px;}      
+
+table .tlink{color:#FFF;}      
+    
+table .tlink:hover{cursor:pointer;color:#72ac72;}  
+ 
+table .tlink:focus{color:red;}      
+    
+table .day{width: 20%;}    
+
+table .time{width:20%}
+    
+table .course{width: 50%}
+    
+table .seminar{width: 10%;} 
+/* ---------------------------------------   */
+table .enum{width: 4%;}  
+    
+table .edate{width: 15%;}    
+
+table .eday{width:10%}
+    
+table .etime{width: 15%}
+    
+table .ecourse{width: 29%;}  
+    
+table .esubjects{width: 27%;}     
+/*----------------------------------------------------------------------------------------------------------------------------------------------------mediascreen        */    
+@media screen and (max-width:240px),@media screen and (max-width:450px){   
+.bx ul li{width:40px;margin-left:auto;}
+.bx img{width:20px;height:auto;}     
+}    
+    
+/*    //////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width:450px){   
+.bx ul li{width:40px;margin-left:auto;}
+.bx img{width:20px;height:auto;}   
+.naviconimg{width:25px;height:auto;}    
+}     
+    
+/*    //////////////////////////////////////////////////////////////////*/
+    
+@media screen and (max-height: 450px) {
+.sidenav{padding-top:15px;}
+.sidenav a{font-size:18px;}
+.overlay{overflow-y:auto;}
+.overlay a{font-size:20px}
+.overlay .closebtn{font-size:40px;top:15px;right:35px;}
+.seculinks{font-size:10px;}
+}
+    
+@media screen and (max-width:750px){
+header a{font-size:40px;}    
+.bx{width:70%;}    
+.bx ul li{width:200px;margin-left:auto;}
+.bx img{width:50px;height:auto;}   
+.blank{width:0px;height:0px;}
+.seculinks{font-size:15px;}
+.overlay-content{right:5%}
+.naviconimg{width:35px;height:auto;padding-left:10px;}  
+nav{padding-bottom:40px;}    
+}
+
+@media screen and (max-width:1440px){
+.bx ul li{width:225px;margin-left:0;}  
+.bx img{width:150px;height:auto;}     
+.bx a{text-decoration:none;cursor:pointer;font-size:35px;}     
+} 
+/*----------------------------------------------------------------------------------------------------------------------------------------------------    */     
+</style>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------scripts------------->    
+<script>
+    
+function opencourses(){document.getElementById("courses").style.height="100%";}
+
+function closecourses(){document.getElementById("courses").style.height="0%";}
+    
+function openne(){document.getElementById("ne").style.height="100%";}
+
+function closene(){document.getElementById("ne").style.height="0%";}
+        
+function openae(){document.getElementById("ae").style.height="100%";}
+
+function closeae(){document.getElementById("ae").style.height="0%";}
+        
+function opencalculus(){document.getElementById("calculus").style.height="100%";}
+    
+function closecalculus(){document.getElementById("calculus").style.height="0%";}
+    
+function opencs(){document.getElementById("cs").style.height="100%";}
+
+function closecs(){document.getElementById("cs").style.height="0%";}
+  
+function openec(){document.getElementById("ec").style.height="100%";}
+
+function closeec(){document.getElementById("ec").style.height="0%";}
+    
+function openecs(){document.getElementById("ecs").style.height="100%";}
+
+function closeecs(){document.getElementById("ecs").style.height="0%";}
+    
+function openulinks(){document.getElementById("ulinks").style.height="100%";}
+
+function closeulinks(){document.getElementById("ulinks").style.height="0%";}    
+    
+function openNav(){document.getElementById("smenu").style.width="250px";}
+
+function closeNav(){document.getElementById("smenu").style.width="0";}
+    
+function openCSch(){document.getElementById("cschedule").style.height="100%";}
+
+function closeCSch(){document.getElementById("cschedule").style.height="0%";}
+    
+function openESch(){document.getElementById("eschedule").style.height="100%";}
+
+function closeESch(){document.getElementById("eschedule").style.height="0%";}    
+        
+function openclm(){document.getElementById("clm").style.height="100%";}
+
+function closeclm(){document.getElementById("clm").style.height="0%";}  
+    
+function opencls(){document.getElementById("cls").style.height="100%";}
+
+function closecls(){document.getElementById("cls").style.height="0%";}
+    
+function opencss(){document.getElementById("css").style.height="100%";}
+
+function closecss(){document.getElementById("css").style.height="0%";}    
+    
+</script>   
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->    
+</head> 
+       
+<body align="center">
+<!--&#128269;-->
+<header><a><b>QH - University</b></a></header>
+
+<nav><a target="_blank" href="https://www.bau.edu.jo/" onclick="closeNav()"><img src="C:\Users\Qassem\Documents\Desktop\Websites\university\icons\unig.jpg" class="naviconimg"></a>
+    <a class="menu" onclick="openNav()">&#9776;</a>
+<div id="smenu" class="sidenav">
+<a href="javascript:void(0)" onclick="closeNav()" class="closebtn">&times;</a><br /><br />     
+<a target="_blank" href="C:\Users\Qassem\Documents\Desktop\Websites\university\Data science study plan BAU.pdf" onclick="closeNav()">Study Plan</a><br /><br />
+   
+<a onclick="openCSch(),closeNav()">Class Schedule</a><br/>
+<a onclick="openESch(),closeNav()">Examination Schedule</a><br/>  
+</div></nav> 
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------Class Schedule------------->     
+<div id="cschedule" class="overlay"><div class="overlay-header"><h1>Class Schedule</h1></div>   
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closeCSch()" class="cancelb">&#x2302;</a></div>   
+
+<div class="overlay-table">      
+    
+<table border="3" align="center">
+    
+<tr><th class="day"><b>Day</b></th><th class="time"><b>Time</b></th><th class="course"><b>Course</b></th><th class="seminar"><b>Seminar</b></th></tr>   
+<!--<tr align="center" style="background-color:white;color:#000;">-->
+
+<tr style="background-color:#283d5f"><td rowspan="2">Sunday</td><td>15:00 - 16:00</td><td><a class="tlink" onclick="openae()">Applied English (1)</a></td><td>1</td></tr><tr style="background-color:#283d5f"><td>16:00 - 17:00</td><td><a class="tlink" onclick="opencs()">Computer Skills (2)</a></td><td>1</td></tr>
+    
+<tr style="background-color:#347127"><td rowspan="3">Monday</td><td>14:00 - 15:30</td><td><a class="tlink" onclick="opencalculus()">Calculus I</a></td><td>8</td></tr><tr style="background-color:#347127"><td>15:30 - 17:00</td><td><a class="tlink" onclick="openec()">Economical Concepts</a></td><td>2</td></tr><tr style="background-color:#347127"><td>18:30 - 20:00</td><td><a class="tlink" onclick="openne()">National Education and University Behavior</a></td><td>1</td></tr>
+    
+<tr style="background-color:#283d5f"><td rowspan="2">Tuesday</td><td>15:00 - 16:00</td><td><a class="tlink" onclick="openae()">Applied English (1)</a></td><td>1</td></tr><tr style="background-color:#283d5f"><td>16:00 - 17:00</td><td><a class="tlink" onclick="opencs()">Computer Skills (2)</a></td><td>1</td></tr> 
+    
+<tr style="background-color:#347127"><td rowspan="3">Wednesday</td><td>14:00 - 15:30</td><td><a class="tlink" onclick="opencalculus()">Calculus I</a></td><td>8</td></tr><tr style="background-color:#347127"><td>15:30 - 17:00</td><td><a class="tlink" onclick="openec()">Economical Concepts</a></td><td>2</td></tr><tr style="background-color:#347127"><td>18:30 - 20:00</td><td><a class="tlink" onclick="openne()">National Education and University Behavior</a></td><td>1</td></tr>   
+    
+<tr style="background-color:#283d5f"><td rowspan="2">Thursday</td><td>15:00 - 16:00</td><td><a class="tlink" onclick="openae()">Applied English (1)</a></td><td>1</td></tr><tr style="background-color:#283d5f"><td>17:00 - 20:00</td><td><a class="tlink" onclick="opencs()">Computer Skills Lab (2)</a></td><td>8</td></tr> 
+    
+</table>       
+</div></div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------Examination Schedule
+----------->  
+<div id="eschedule" class="overlay"><div class="overlay-header"><h1>Examination Schedule / Mid Term</h1></div>   
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closeESch()" class="cancelb">&#x2302;</a></div>   
+
+<div class="overlay-table">      
+    
+<table border="3" align="center">
+    
+<tr><th class="enum"><b>#</b></th><th class="edate"><b>Date</b></th><th class="eday"><b>Day</b></th><th class="etime"><b>Time</b></th><th class="ecourse"><b>Course</b></th><th class="esubjects"><b>Subjects</b></th></tr>   
+<!--<tr align="center" style="background-color:white;color:#000;">-->
+<!--  style="background-color:#e31f1f"   -->
+<tr><td><strike>1</strike></td><td><strike>29/11/2020</strike></td><td><strike>Sunday</strike></td><td><strike>20:00 - 20:30</strike></td><td><strike><a class="tlink" onclick="openae()">Applied English (1)</a></strike></td><td><strike>Chapter 1,2,3</strike></td></tr>
+<tr><td><strike>2</strike></td><td><strike>05/12/2020</strike></td><td><strike>Saturday</strike></td><td><strike>17:00 - 17:30</strike></td><td><strike><a class="tlink" onclick="opencs()">Computer Skills (2)</a></strike></td><td><strike>Chapter 2,3,4</strike></td></tr>
+<tr><td><strike>3</strike></td><td><strike>07/12/2020</strike></td><td><strike>Monday</strike></td><td><strike>15:30 - 16:00</strike></td><td><strike><a class="tlink" onclick="openec()">Economical Concepts</a></strike></td><td><strike>Chapter 1,2,3,4,5</strike></td></tr> 
+<tr><td><strike>4</strike></td><td><strike>09/12/2020</strike></td><td><strike>Wednesday</strike></td><td><strike>18:30 - 19:00</strike></td><td><strike><a class="tlink" onclick="openne()">National Education and University Behavior</a></strike></td><td><strike>Chapter 1,2,3</strike></td></tr>
+<tr><td><strike>5</strike></td><td><strike>12/12/2020</strike></td><td><strike>Saturday</strike></td><td><strike>14:00 - 14:30</strike></td><td><a class="tlink" onclick="opencalculus()"><strike>Calculus I</strike></a></td><td><strike>Page 1 - Page 59</strike></td></tr>    
+    
+</table>       
+</div></div>    
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------boxes---------------->  
+<div class="bx"><ul>
+<a onclick="opencourses(),closeNav()"><li><img alt ="courses" src="C:\Users\Qassem\Documents\Desktop\Websites\university\icons\crs.png" style="padding-top:10px;"><p>Courses</p></li></a>
+<a target="_blank" href="http://s1.ebalqa.courses/ncentermoodle/login/index.php" onclick="closeNav()"><li><img alt="E-Learning" src="C:\Users\Qassem\Documents\Desktop\Websites\university\icons\el.png"><p>E-Learning</p></li></a>
+<a target="_blank" href="http://app3.bau.edu.jo:7777/reg_new/index.jsp" onclick="closeNav()"><li><img alt="E-Registration" src="C:\Users\Qassem\Documents\Desktop\Websites\university\icons\er.png" style="padding-top:10px;"><p>E-Registration</p></li></a>
+</ul></div><br />
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------overlay---------------->    
+<div id="courses" class="overlay"><div class="overlay-header"><h1>Courses</h1></div>
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses()" class="cancelb">&#x2302;</a></div>   
+<div class="overlay-content"><ul>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------NE---------------->     
+<li><a onclick="openne()">National Education and University Behavior</a></li>
+<div id="ne" class="overlay"><div class="overlay-header"><h2>National Education and University Behavior</h2></div>  
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closene()" class="backbtn">&#8249;</a><a href="javascript:void(0)" onclick="closecourses(),closene(),closeSch()" class="cancel">&#x2302;</a>
+</div>      
+<div class="overlay-content"><ul>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch1.pdf" target="_blank">Chapter 1</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch2.pdf" target="_blank">Chapter 2</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch3.pdf" target="_blank">Chapter 3</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch4.pdf" target="_blank">Chapter 4</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch5.pdf" target="_blank">Chapter 5</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch6.pdf" target="_blank">Chapter 6</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\ch7.pdf" target="_blank">Chapter 7</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ne\an.pdf" target="_blank">ملخص الأوراق النقاشية</a></li>
+</ul></div></div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------AE---------------->    
+<li><a onclick="openae()">Applied English (1)</a></li>
+<div id="ae" class="overlay"><div class="overlay-header"><h1>Applied English (1)</h1></div>
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses(),closeae(),closeSch()" class="cancel">&#x2302;</a><a href="javascript:void(0)" onclick="closeae()" class="backbtn">&#8249;</a></div>
+<div class="overlay-content"><ul>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ae\aesyllabus.pdf" target="_blank">Syllabus </a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ae\aebook.pdf" target="_blank">Technical Writing book</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ae\Interchange 5th 1A-SB.pdf" target="_blank">Interchange 5th 1A-SB</a></li>  
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ae\Interchange 5th 1A-WB.pdf" target="_blank">Interchange 5th 1A-WB</a></li>  
+</ul></div></div>
+ <!---------------------------------------------------------------------------------------------------------------------------------------------------------Calculus---------------->   
+<li><a onclick="opencalculus()">Calculus I</a></li>
+<div id="calculus" class="overlay"><div class="overlay-header"><h1>Calculus I</h1></div>
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses(),closecalculus(),closeSch()" class="cancel">&#x2302;</a><a href="javascript:void(0)" onclick="closecalculus()" class="backbtn">&#8249;</a></div>
+<div class="overlay-content"><ul>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\calculus\calculussyllabus.pdf" target="_blank">Syllabus</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\calculus\book.pdf" target="_blank">Book</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\calculus\notebook.pdf" target="_blank">Notebook</a></li>
+</ul></div></div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------CS---------------->    
+<li><a onclick="opencs()">Computer Skills (2)</a></li>
+<div id="cs" class="overlay"><div class="overlay-header"><h1>Computer Skills (2)</h1></div>
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses(),closecs(),closeSch()" class="cancel">&#x2302;
+</a><a href="javascript:void(0)" class="backbtn" onclick="closecs()">&#8249;</a></div>
+<div class="overlay-content"><ul>  
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\cssyllabus.pdf" target="_blank">Syllabus</a></li>  
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\csbook.pdf" target="_blank">Book</a></li>
+    
+<li><a target="_blank" onclick="opencss()">Slides</a></li>
+    
+<div id="css" class="overlay">   
+<div class="overlay-header"><h2>Computer Skills (2) - Slides</h2></div>  
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses(),closecs(),closecss()" class="cancel">&#x2302;
+</a><a href="javascript:void(0)" class="backbtn" onclick="closecss()">&#8249;</a></div>
+<div class="overlay-content"><ul>
+    
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\slides\ch1.pdf" target="_blank">Slide 1</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\slides\ch2.pdf" target="_blank">Slide 2</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\slides\ch4.pdf" target="_blank">Slide 3</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\slides\ch5.pdf" target="_blank">Slide 4</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\slides\ch6&7.pdf" target="_blank">Slide 5</a></li> 
+    
+</ul></div></div>    
+    
+<li><a target="_blank" onclick="openclm()">Lab Manual</a></li>
+    
+<div id="clm" class="overlay">   
+<div class="overlay-header"><h2>Computer Skills (2) - Lab Manual</h2></div>  
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses(),closecs(),closeclm()" class="cancel">&#x2302;
+</a><a href="javascript:void(0)" class="backbtn" onclick="closeclm()">&#8249;</a></div>
+<div class="overlay-content"><ul>
+    
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m1.pdf" target="_blank">Lab 1</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m2.pdf" target="_blank">Lab 2</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m3.pdf" target="_blank">Lab 3</a></li>   
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m4.pdf" target="_blank">Lab 4</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m5.pdf" target="_blank">Lab 5</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m6.pdf" target="_blank">Lab 6</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m7.pdf" target="_blank">Lab 7</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m8.pdf" target="_blank">Lab 8</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m9.pdf" target="_blank">Lab 9</a></li>    
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab manual\m10.pdf" target="_blank">Lab 10</a></li>    
+  
+</ul></div></div>  
+
+<li><a target="_blank" onclick="opencls()">Lab Solutions</a></li>
+    
+<div id="cls" class="overlay">   
+<div class="overlay-header"><h2>Computer Skills (2) - Lab Solutions</h2></div>  
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closecourses(),closecs(),closecls()" class="cancel">&#x2302;
+</a><a href="javascript:void(0)" class="backbtn" onclick="closecls()">&#8249;</a></div>
+<div class="overlay-content"><ul>
+    
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab solutions\s2.pdf" target="_blank">Lab 2 Solution</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab solutions\s3.pdf" target="_blank">Lab 3 Solution</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab solutions\s4.pdf" target="_blank">Lab 4 Solution</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab solutions\s5.pdf" target="_blank">Lab 5 Solution</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\cs\lab solutions\s6.pdf" target="_blank">Lab 6 Solution</a></li>
+
+</ul></div></div>       
+     
+<li><a href="https://www.youtube.com/channel/UCBG2lN_ZJLYJXou8o4RTg7w" target="_blank">Youtube Channel</a></li>
+<li><a href="https://www.onlinegdb.com/online_c++_compiler" target="_blank">Online C++ Compiler</a></li> 
+<li><a href="https://sites.google.com/site/bauskills2/" target="_blank">Course's Website</a></li>   
+</ul></div></div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------EC---------------->  
+<li><a onclick="openec()">Economical Concepts</a></li>
+<div id="ec" class="overlay"><div class="overlay-header"><h1>Economical Concepts</h1> 
+</div><div class="overlay-nav">
+<a href="javascript:void(0)" onclick="closecourses(),closeec(),closeSch()" class="cancel">&#x2302;</a><a href="javascript:void(0)" onclick="closeec()" class="backbtn">&#8249;</a></div><div class="overlay-content"><ul>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\ecsyllabus.pdf" target="_blank">Syllabus</a></li>  
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\ecbook.pdf" target="_blank">Book</a></li>
+<li><a onclick="openecs()">Slides</a></li></ul><div id="ecs" class="overlay"><div class="overlay-header"><h2>Economical Concepts - Slides</h2></div><div class="overlay-nav">
+<a href="javascript:void(0)" onclick="closecourses(),closeec(),closeecs()" class="cancel">&#x2302;</a><a href="javascript:void(0)" onclick="closeecs()" class="backbtn">&#8249;</a></div>
+<div class="overlay-content"><ul>  
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\what is economics.pdf" target="_blank">ما هو الاقتصاد</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\production possibilities curve.pdf" target="_blank">منحنى إمكانات الإنتاج</a></li> 
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\demand.pdf" target="_blank">الطلب</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\supply.pdf" target="_blank">العرض</a></li> 
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\price control.pdf" target="_blank">مراقبة وضبط الأسعار</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\types of markets.pdf" target="_blank">أنواع الأسواق في علم الاقتصاد</a></li>   
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\gross domestic product.pdf" target="_blank">الناتج المحلي الإجمالي</a></li>    
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\unemployment and inflation.pdf" target="_blank">البطالة والتضخم</a></li> 
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\money.pdf" target="_blank">النقود</a></li>
+<li><a href="C:\Users\Qassem\Documents\Desktop\Websites\university\courses\ec\slides\banks.pdf" target="_blank">البنوك</a></li>     
+</ul></div></div></div></div></ul></div></div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------ulinks----------------> 
+<div id="ulinks" class="overlay"><div class="overlay-header"><h1>Useful Links</h1></div>
+<div class="overlay-nav"><a href="javascript:void(0)" onclick="closeulinks()" class="cancelb">&#x2302;</a></div>
+<div class="overlay-content"><ul>
+<li><a href="https://www.pdfescape.com/windows/" target="_blank">PDF Editior</a></li>
+<li><a href="http://libgen.rs/" target="_blank">E-Library</a></li>
+<li><a href="https://www.cymath.com/" target="_blank">Math problem solver with steps</a>
+<li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></li>
+<li><a href="https://www.autodraw.com/" target="_blank">Autodraw</a></li>  
+<li><a href="http://gridzzly.com/" target="_blank">Grid paper maker</a></li>   
+<li><a href="##########" onclick="window.open('https://www.duplichecker.com/');window.open('https://www.quetext.com/');window.open('https://plagiarismdetector.net/');">Plagiarism Checkers</a></li>   
+</ul></div></div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->  
+<iframe class="blank"></iframe>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------footer------------->
+<!--    style="width:50px;height:auto"-->
+<section>
+<a target="_blank" href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000006-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid+profile&state=OpenIdConnect.AuthenticationProperties%3d3zQ7snE8JGfh-l1Lw-UfR1cgzexfqmMoHhMwXFNK-8NKSkKS6NilgBv-to-ktuW8KSighyO2kRcuHFzRjQJM3YrlMuGqyMVIipYnc3icj50mH_ctAXsala-9BdunSfdLTVbePs99npYj-WO2c-CFwQtvbgxbpGnZUfvewF4jBnL4SnZOuHpd8CYU9nVm-7LP&nonce=637419172401206379.N2ExOTE2YTktYWZiMy00NWNmLWI4ODAtYmExZTIzYWRkNjY0NzNmYjdhMTAtNGVjNS00ZTczLTg3NGItMzE0YWRlYzM3Yjlh&redirect_uri=https%3a%2f%2fportal.office.com%2flanding&ui_locales=en-US&mkt=en-US&msafed=0" onclick="closeNav()" class="mail">&#9993;</a>
+<a target="_blank" onclick="openulinks(),closeNav()" class="seculinks"><b>Useful Links</b></a><br /><br /></section>   
+<footer><br /><br /><div class="cr">&#169;2020&#64;<a href="https://www.linkedin.com/in/qh21/" target="_blank" onclick="closeNav()">QH-co</a></div><br /><br /></footer>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->     
+</body>     
+
+</html> 
